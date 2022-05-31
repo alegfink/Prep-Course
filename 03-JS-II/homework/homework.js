@@ -35,7 +35,7 @@ function conection(status) {
     return 'Online';
   }
     if (status === 2){
-      return 'Away';
+     return 'Away';
     }
     return 'Offline';
 }
@@ -90,9 +90,9 @@ function esDiezOCinco(numero) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if (numero === 10 || numero === 5){
-    return 'true';
+    return true;
   }
-  return 'false';
+  return false;
 }
 
 function estaEnRango(numero) {
@@ -100,9 +100,9 @@ function estaEnRango(numero) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if (numero < 50 && numero > 20){
-    return 'true';
+    return true;
   }
-  return 'false';
+  return false;
 }
 
 function esEntero(numero) {
@@ -114,9 +114,9 @@ function esEntero(numero) {
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
   if (numero === 0 || numero/Math.floor(numero) === 1){
-    return 'true';
+    return true;
   }
-  return 'false';
+  return false;
 }
 
 function fizzBuzz(numero) {
@@ -124,17 +124,16 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  var salida = ''
-  switch (numero){
-    case (numero % 3 === 0):
-      salida += 'fizz';
-    case (numero % 5 === 0):
-      salida += 'buzz';
-      return salida;
-      break;
-    default:
-      return numero;
+  if (numero % 3 === 0 && numero % 5 === 0){
+    return 'fizzbuzz';
   }
+    if (numero % 3 === 0){
+      return 'fizz';
+    }  
+      if (numero % 5 === 0){
+        return 'buzz';
+      }
+  return numero;
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -166,13 +165,15 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-  for (let x = 2; numero > 1 && x < numero && numero % x !== 0; x++){
-    return x;
-  }  
-    if (numero !== 0 && numero !== 1 && numero === x){
-        return "true";
+  if (numero !== 0 && numero !== 1){ 
+    for (let i = 2 ; i < numero ; i++){
+      if (numero % i === 0){
+      return false;
       }
-      return "falso";
+    }
+    return true;
+  }
+      return false;
 }
 
 
@@ -190,18 +191,20 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  var tabla = []
-  let i = -1;
+  var tabla = [];
+  let i = 0;
   do{
-    i = i + 1;
-    tabla =
+    tabla[i] = 6*i;
+    i=i+1;
   }
+  while (i <= 10);
+  return tabla;
 }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  if (numero.length === 3){
+  if (numero > 99 && numero < 1000){
     return true;
   }
   return false;
@@ -211,12 +214,12 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-  let i = o;
+  let i = 0;
   do {
     i = i + 5;
-    numero = numero + i;
+    numeroFinal = numero + i;
   } while (i < 40);
-  return numero
+  return numeroFinal;
 }
 
 
