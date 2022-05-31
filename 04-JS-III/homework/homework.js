@@ -108,6 +108,7 @@ function numeroMasGrande(numeros) {
   for (let i = 0 ; i < numeros.length ; i++){
     if (numeros[i] >= nComparativo){
       nMayor = numeros [i];
+      nComparativo = numeros [i];
     }
   }
   return nMayor;
@@ -122,7 +123,7 @@ function multiplicarArgumentos() {
     return arguments.length;
   }
   if (arguments.length === 1){
-    return arguments;
+    return 1;
   }
   var producto = 1
   for (let i = 0 ; i < arguments.length ; i++){
@@ -161,7 +162,11 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  
+  var nstring = n.toString();
+  if (nstring.charAt(0) === "9"){
+    return true;
+  }
+  return false;
 }
 
 
@@ -169,16 +174,17 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
+  var premisa = 0;
   for (let i = 0 ; i < arreglo.length ; i++){
-    if (arreglo [i] === arreglo [i-1]) {
-      premisa = true;
+    if (arreglo [i] !== arreglo [0]) {
+      return false;
     }
-    premisaFalsa = fallo;
+    premisa = premisa + 1
   }
-  if (premisaFalsa === fallo){
-    return false;
+  if (premisa = arreglo.length){
+    return true;
   }
-  return true;
+  return false;
 } 
 
 
@@ -189,16 +195,12 @@ function mesesDelAño(array) {
   // Tu código:
   var arrayNuevo = [];
   for (let i = -1; i < array.length ; i++){
-    if (array[i] === 'Enero'){
-      arrayNuevo = arrayNuevo.push (array[i]);
+    if (array[i] === 'Enero' || array[i] === 'Marzo' || array[i] === "Noviembre"){
+      arrayNuevo.push (array[i]);
     }
-    if (array[i] === 'Marzo'){
-      arrayNuevo = arrayNuevo.push (array[i]);
-    }
-    if (array[i] === "Noviembre"){
-      arrayNuevo = arrayNuevo.push (array[i]);
-    }
-    return "No se encontraron los meses pedidos"
+  }
+  if (arrayNuevo.length < 3){
+    return "No se encontraron los meses pedidos";
   }
   return arrayNuevo;
 }
@@ -211,7 +213,7 @@ function mayorACien(array) {
   var nuevoArray = [];
   for (let i = 0 ; i < array.length ; i++){
     if (array[i] > 100){
-      nuevoArray = nuevoArray.push(array[i]);
+      nuevoArray.push(array[i]);
     }
   }
   return nuevoArray;
@@ -230,12 +232,11 @@ function breakStatement(numero) {
   var suma = numero;
   for (let i = 0 ; i < 10 ; i++){
     suma = suma + 2;
-    if (suma === i){
-      break;
-    }
-    newArray = newArray.push(suma);
+    limite = i;
+    if (suma === i) break;
+    newArray.push(suma);
   }
-  if (i < 10){
+  if (limite < 9){
     return "Se interrumpió la ejecución";
   }
   return newArray;
@@ -249,6 +250,15 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  var newArray = [];
+  var suma = numero;
+  for (let i = 0 ; i < 10 ; i++){
+    iteraccion = i;
+    if (iteraccion === 5) continue;
+    suma = suma + 2;
+    newArray.push(suma);
+  }
+  return newArray;
 }
 
 
