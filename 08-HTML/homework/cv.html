@@ -1,0 +1,241 @@
+<html>
+    <head>
+        <title>CV Alejandro Fink</title>
+        <style>
+            html{
+                background: url(https://saberimagenes.com/wp-content/uploads/2019/02/0f1428cff77e208c6f00d3e1c1a07340-300x533.jpg);
+                /*-webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;*/
+                
+            }
+            *{
+                font-family: monospace;
+                color: white;
+            }
+            .negrita{
+                font-weight: bold;
+                
+            }
+            #datosPersonales{
+                display: grid;
+                /* border: 2px solid blue;*/
+                width: 500px;
+                height: 300px;
+                grid-template: repeat(8, 1fr) / 50% 50%;
+                padding: 10px;
+                background-color: black;
+                font-size: 15px;
+                position: relative;
+                top: 70px;
+                left: 10px;
+                z-index: 3;
+        
+            }
+            #dni{
+                grid-area: 2 / 1 ;
+            }
+            #datosDni{
+                grid-area: 2 / 2 ;
+            }
+            #fechaNac{
+                grid-area: 3 / 1 ;
+            }
+            #datosFechaNac{
+                grid-area: 3 / 2 ;
+            }
+            #estadoCiv{
+                grid-area: 4 / 1 ;
+            }
+            #datosEstadoCiv{
+                grid-area: 4 / 2 ;
+            }
+            #nac{
+                grid-area: 5 / 1 ;
+            }
+            #datosNac{
+                grid-area: 5 / 2 ;
+            }
+            #domic{
+                grid-area: 6 / 1 ;
+            }
+            #datosDomic{
+                grid-area: 6 / 2 ;
+            }
+            #telMov{
+                grid-area: 7 / 1 ;
+            }
+            #datosTelMov{
+                grid-area: 7 / 2 ;
+            }
+            #telAlt{
+                grid-area: 8 / 1 ;
+            }
+            #datosTelAlt{
+                grid-area: 8 / 2 ;
+            }
+            #email{
+                grid-area: 9 / 1 ;
+            }
+            #datosEmail{
+                grid-area: 9 / 2 ;
+            }
+            .varios{
+                position: relative;
+                top: 70px;
+                z-index: 4;
+                padding-left: 30px;
+                padding-top: 15px; 
+            }
+            #divNombre{
+                position: fixed;
+                font-size: 25px;
+                background-color: black;
+                width: 100%;
+                z-index: 5;
+                margin: 0;
+            }
+            #divFlexNombre{
+                display: flex;
+                justify-content: center;
+            }
+            body{
+                margin: 0;
+            }
+            .titulo{
+                font-size: 18px;
+                font-weight: bold;
+            }
+            #divExplicacion{
+                padding-top: 45px;
+                padding-bottom: 30px;
+            }
+            #explicacion{
+                font-size: 18px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="divNombre">
+            <div id="divFlexNombre">
+                <p id="nombre">Alejandro Gabriel Fink</p>
+            </div>
+        </div>
+        <div id="datosPersonales">
+                    <span class="negrita", id="dni">DNI: </span>
+                    <span class="datos", id="datosDni">35.729.152</span>
+                    <span class="negrita", id="fechaNac">Fecha de nacimiento: </span>
+                    <span class="datos", id="datosFechaNac">01-02-1991</span>
+                    <span class="negrita", id="estadoCiv">Estado Civil: </span>
+                    <span class="datos", id="datosEstadoCiv">Soltero</span>
+                    <span class="negrita", id="nac">Nacionalidad: </span>
+                    <span class="datos", id="datosNac">Argentino</span>
+                    <span class="negrita", id="domic">Domicilio: </span>
+                    <span class="datos", id="datosDomic">Mendoza 4545 2B, CABA</span>
+                    <span class="negrita", id="telMov">Tel Movil: </span>
+                    <span class="datos", id="datosTelMov">54 11 6249 4740</span>
+                    <span class="negrita", id="telAlt">Tel Alternativo: </span>
+                    <span class="datos", id="datosTelAlt">54 11 4931 4480</span>
+                    <span class="negrita", id="email">Email: </span>
+                    <span class="datos", id="datosEmail">alegfink@gmail.com</span>
+        </div>
+        <div id="primerDiv"; class="varios">
+            <p class="titulo">Estudios</p>
+            <ul>
+                <li>
+                    <p>Universitario: Ingeniería Industrial - Universidad Tecnológica Nacional (UTN).
+                        16 Materias aprobadas (2015 - 2018)</p>
+                </li>
+                <li>
+                    <p>Universitario: Ingeniería Civil - Universidad Tecnológica Nacional (UTN).
+                        12 Materias aprobadas (2010-2014)</p>
+                </li>
+                <li>    
+                    <p>Secundario: Colegio San Francisco de Sales, Almagro, CABA.
+                        Título: Bachillerato Mercantil (2008)</p>
+                </li>
+            </ul>
+        </div>
+        <div class="varios">
+            <p class="titulo">Experiencia Laboral</p>
+            <ul>
+                <li>
+                    <p>Soychu - Frigorifico Aviar (Agosto 2019 - Actualidad)
+                        Responsable de creación y mantenimiento de la Base de Datos Maestros de SAP de la empresa. Brindar rápida
+                        solución a las necesidades de la empresa a través de un sistema de Tickets con un promedio de 300 tickets 
+                        mensuales. Hacer de intermediario entre los distintos departamentos para lograr un resultado que favorezca a 
+                        las partes.</p>
+                </li>
+                <li>
+                    <p>Accenture - Compañía global de Servicios. (Nov 2016 - Dic 2018)
+                        Testing con pleno uso de SAP y Web Servicies, Proyectos a cargo, Intermediario entre equipos de EEUU, Manila 
+                        y Argentina, Armar escenarios de prueba para el testing, Creación de "Data prep" para el testing, Creación y 
+                        edición de archivos funcionales para su registro, Asistencia a reuniones diarias o semanales con equipos de 
+                        distintos países para responder a un cronograma de trabajo y Responder vía mail a asuntos relacionados con 
+                        nuestros proyectos.</p>
+                </li>
+                <li>
+                    <p>Unión Personal - Obra Social. (Nov 2013 - Feb 2016) 
+                        Asistente de Vicepresidencia, una persona a cargo. 
+                        Organizador de reuniones de directorio, auditor de ordenes de compras y contratos, elaboración de 
+                        presupuestos, administrador de caja chica, recepcionista, telefonista, tareas administrativas y atención al 
+                        público. </p>
+                </li>
+            </ul>
+        </div>
+        <div class="varios">
+            <p class="titulo">Idiomas</p>
+            <ul>
+                <li>
+                    <p>Inglés - Nivel Experto - Asociación Argentina de Cultura Inglesa (AACI) - (2009)</p>
+                </li>
+            </ul>
+        </div>
+        <div class="varios">
+            <p class="titulo">Cursos</p>
+            <ul>
+                <li>
+                    <p>Desarrollo Web Full Stack, SoyHerny (En curso)</p>
+                </li>
+                <li>
+                    <p>Fundamentos de Base de Datos, UTN e-Learning (2020)</p>
+                </li>
+                <li>
+                    <p>Gestión Empresarial, Instituto Nacional de Servicios y Empresas, INSE (2015)</p>
+                </li>
+                <li>    
+                    <p>Seguridad e Higiene, Centro de Estudios Técnicos Administrativos Empresariales (CETAE) (2013)</p>
+                </li>
+                <li>    
+                    <p>Autocad, Centro de Estudios Técnicos Administrativos Empresariales (CETAE) (2013)</p>
+                </li>
+            </ul>
+        </div>
+        <div class="varios">
+            <p class="titulo">Otros Conocimientos</p>
+            <ul>
+                <li>
+                    <p>Computación: SAP, MySQL, Microsoft Word, Excel, Power Point, Access, C++</p>
+                </li>
+            </ul>
+        </div>
+        <div class="varios">
+            <p class="titulo">Hobbies</p>
+            <ul>
+                <li>
+                    <p>Paddle, Tennis, DJ, videojuegos, Poker y ciclismo</p>
+                </li>
+            </ul>
+        </div>
+        <div class="varios"; id="divExplicacion">
+            <p id="explicacion">¿Por que hago esta carrera?</p>
+            <ul>
+                <li>
+                    <p>Ya no es solo la carrera del futuro, sino del presente. Mis padres son desarrolladores y analistas y me recomendaron una y aprenda algun lenguaje. Yo me negaba porque no me veia todo el dia atras de una computadora en la oficina, pero las libertades de trabajar por tu cuenta y los altos salarios me convencienron de darle una oportunidad, y con lo que aprendi en este curso de SoyHenry me desperto un interes mayor. Siempre me gusto la logica del pero me resultaba dificil de comprender, pero ahora me siento mucho mas capacitado y con ganas de formarme cada vez mas.</p>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
