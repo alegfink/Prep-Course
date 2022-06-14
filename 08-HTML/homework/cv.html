@@ -31,7 +31,7 @@
                 top: 70px;
                 left: 10px;
                 z-index: 3;
-        
+                       
             }
             #dni{
                 grid-area: 2 / 1 ;
@@ -82,11 +82,15 @@
                 grid-area: 9 / 2 ;
             }
             .varios{
+                display: block;
                 position: relative;
                 top: 70px;
                 z-index: 4;
                 padding-left: 30px;
-                padding-top: 15px; 
+                padding-top: 15px;
+                padding-right: 50px;
+                padding-bottom: 15px;
+                text-align: justify; 
             }
             #divNombre{
                 position: fixed;
@@ -108,13 +112,23 @@
                 font-weight: bold;
             }
             #divExplicacion{
-                padding-top: 45px;
+                padding-top: 30px;
                 padding-bottom: 30px;
             }
             #explicacion{
                 font-size: 18px;
                 font-weight: bold;
             }
+            #datosYfoto{
+                display: flex;
+                justify-content: space-between;
+                
+            }
+            #foto{
+                
+                align-self:flex-end;
+            }
+            
         </style>
     </head>
     <body>
@@ -123,7 +137,8 @@
                 <p id="nombre">Alejandro Gabriel Fink</p>
             </div>
         </div>
-        <div id="datosPersonales">
+        <div id="datosYfoto">
+            <div id="datosPersonales">
                     <span class="negrita", id="dni">DNI: </span>
                     <span class="datos", id="datosDni">35.729.152</span>
                     <span class="negrita", id="fechaNac">Fecha de nacimiento: </span>
@@ -140,17 +155,18 @@
                     <span class="datos", id="datosTelAlt">54 11 4931 4480</span>
                     <span class="negrita", id="email">Email: </span>
                     <span class="datos", id="datosEmail">alegfink@gmail.com</span>
+            </div>
+            <div id="foto">
+                    <img src="./Foto-cv.jpg">
+            </div>
+            <div>''</div>
         </div>
         <div id="primerDiv"; class="varios">
             <p class="titulo">Estudios</p>
             <ul>
                 <li>
-                    <p>Universitario: Ingeniería Industrial - Universidad Tecnológica Nacional (UTN).
+                    <p>Universitario: Ingenieria Industrial - Universidad Tecnologica Nacional (UTN).
                         16 Materias aprobadas (2015 - 2018)</p>
-                </li>
-                <li>
-                    <p>Universitario: Ingeniería Civil - Universidad Tecnológica Nacional (UTN).
-                        12 Materias aprobadas (2010-2014)</p>
                 </li>
                 <li>    
                     <p>Secundario: Colegio San Francisco de Sales, Almagro, CABA.
@@ -163,24 +179,24 @@
             <ul>
                 <li>
                     <p>Soychu - Frigorifico Aviar (Agosto 2019 - Actualidad)
-                        Responsable de creación y mantenimiento de la Base de Datos Maestros de SAP de la empresa. Brindar rápida
-                        solución a las necesidades de la empresa a través de un sistema de Tickets con un promedio de 300 tickets 
+                        Responsable de creacion y mantenimiento de la Base de Datos Maestros de SAP de la empresa. Brindar rapida
+                        solucion a las necesidades de la empresa a traves de un sistema de Tickets con un promedio de 300 tickets 
                         mensuales. Hacer de intermediario entre los distintos departamentos para lograr un resultado que favorezca a 
                         las partes.</p>
                 </li>
                 <li>
-                    <p>Accenture - Compañía global de Servicios. (Nov 2016 - Dic 2018)
+                    <p>Accenture - Compañia global de Servicios. (Nov 2016 - Dic 2018)
                         Testing con pleno uso de SAP y Web Servicies, Proyectos a cargo, Intermediario entre equipos de EEUU, Manila 
-                        y Argentina, Armar escenarios de prueba para el testing, Creación de "Data prep" para el testing, Creación y 
-                        edición de archivos funcionales para su registro, Asistencia a reuniones diarias o semanales con equipos de 
-                        distintos países para responder a un cronograma de trabajo y Responder vía mail a asuntos relacionados con 
+                        y Argentina, Armar escenarios de prueba para el testing, Creación de "Data prep" para el testing, Creacion y 
+                        edicion de archivos funcionales para su registro, Asistencia a reuniones diarias o semanales con equipos de 
+                        distintos paises para responder a un cronograma de trabajo y Responder via mail a asuntos relacionados con 
                         nuestros proyectos.</p>
                 </li>
                 <li>
-                    <p>Unión Personal - Obra Social. (Nov 2013 - Feb 2016) 
+                    <p>Union Personal - Obra Social. (Nov 2013 - Feb 2016) 
                         Asistente de Vicepresidencia, una persona a cargo. 
-                        Organizador de reuniones de directorio, auditor de ordenes de compras y contratos, elaboración de 
-                        presupuestos, administrador de caja chica, recepcionista, telefonista, tareas administrativas y atención al 
+                        Organizador de reuniones de directorio, auditor de ordenes de compras y contratos, elaboracion de 
+                        presupuestos, administrador de caja chica, recepcionista, telefonista, tareas administrativas y atencion al 
                         público. </p>
                 </li>
             </ul>
@@ -189,7 +205,7 @@
             <p class="titulo">Idiomas</p>
             <ul>
                 <li>
-                    <p>Inglés - Nivel Experto - Asociación Argentina de Cultura Inglesa (AACI) - (2009)</p>
+                    <p>Ingles - Nivel Experto - Asociacion Argentina de Cultura Inglesa (AACI) - (2009)</p>
                 </li>
             </ul>
         </div>
@@ -197,19 +213,16 @@
             <p class="titulo">Cursos</p>
             <ul>
                 <li>
-                    <p>Desarrollo Web Full Stack, SoyHerny (En curso)</p>
-                </li>
-                <li>
                     <p>Fundamentos de Base de Datos, UTN e-Learning (2020)</p>
                 </li>
                 <li>
-                    <p>Gestión Empresarial, Instituto Nacional de Servicios y Empresas, INSE (2015)</p>
+                    <p>Gestion Empresarial, Instituto Nacional de Servicios y Empresas, INSE (2015)</p>
                 </li>
                 <li>    
                     <p>Seguridad e Higiene, Centro de Estudios Técnicos Administrativos Empresariales (CETAE) (2013)</p>
                 </li>
                 <li>    
-                    <p>Autocad, Centro de Estudios Técnicos Administrativos Empresariales (CETAE) (2013)</p>
+                    <p>Autocad, Centro de Estudios Tecnicos Administrativos Empresariales (CETAE) (2013)</p>
                 </li>
             </ul>
         </div>
@@ -217,7 +230,7 @@
             <p class="titulo">Otros Conocimientos</p>
             <ul>
                 <li>
-                    <p>Computación: SAP, MySQL, Microsoft Word, Excel, Power Point, Access, C++</p>
+                    <p>Computacion: SAP, MySQL, Microsoft Word, Excel, Power Point, Access, C++</p>
                 </li>
             </ul>
         </div>
@@ -233,7 +246,7 @@
             <p id="explicacion">¿Por que hago esta carrera?</p>
             <ul>
                 <li>
-                    <p>Ya no es solo la carrera del futuro, sino del presente. Mis padres son desarrolladores y analistas y me recomendaron una y aprenda algun lenguaje. Yo me negaba porque no me veia todo el dia atras de una computadora en la oficina, pero las libertades de trabajar por tu cuenta y los altos salarios me convencienron de darle una oportunidad, y con lo que aprendi en este curso de SoyHenry me desperto un interes mayor. Siempre me gusto la logica del pero me resultaba dificil de comprender, pero ahora me siento mucho mas capacitado y con ganas de formarme cada vez mas.</p>
+                    <p>Siempre me gusto la logica que hay detras del codigo, pero no le terminaba de encontrar interes. Con este curso de Desarrollo Web Full Stack pude visualizar algunos de los alcances de la programacion y me resultan muy atractivos, ya estuve averiguando por mi cuenta y creo que tengo mucho mas para desarrollar y crecer en el mundo de la tecnologia y estoy dispuesto a dar lo mejor de mi para conseguirlo.</p>
                 </li>
             </ul>
         </div>
